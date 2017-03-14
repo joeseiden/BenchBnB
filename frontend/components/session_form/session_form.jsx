@@ -36,17 +36,19 @@ class SessionForm extends React.Component {
   }
 
   clearErrors() {
-    
+
   }
 
   renderErrors() {
+    if (this.props.errors){
     return (
       <ul className="errors">
         {this.props.errors.map((err, i) => (
           <li key={`error-${i}`}>{err}</li>
         ))}
       </ul>
-    );
+      );
+    }
   }
 
   navLink() {
